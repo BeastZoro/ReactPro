@@ -18,7 +18,6 @@ const Home = () => {
             updateLoading(false)
             const allCategories = ['all', ...new Set(data.products.map((ele) => ele.category))]
             updateCategories(allCategories)
-            console.log(product, "insid efetch")
         } catch (error) {
             console.log(error)
         }
@@ -26,10 +25,8 @@ const Home = () => {
 
     useEffect(() => {
         fetchData()
-        console.log("first")
     }, [])
 
-    console.log(product)
     if (loading) {
         return <h1>Loading...</h1>
     }
