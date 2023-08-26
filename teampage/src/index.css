@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.teams_page {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 25px 0;
+  /* border: 2px solid; */
+}
+
+.team_title {
+  font-weight: 800;
+  text-align: left;
+  font-size: 2.5rem;
+  background: linear-gradient(360deg, #234eb0 5%, #9010b0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 0 20px;
+}
+
+.team_title + p {
+  color: #6e23b0;
+  text-align: left;
+  font-size: 1rem;
+  margin: 5px 0;
+  padding: 0 20px;
+}
+
+.universities {
+  margin: 30px 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 240px));
+  grid-auto-rows: 50px;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.1rem;
+  padding: 0 10px;
+}
+
+.institute {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#6e23b0, #a06fcc);
+  text-transform: capitalize;
+  border-radius: 7px;
+  color: white;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.institute:hover {
+  transform: scale(1.05);
+}
+
+.mentors {
+  margin: 50px 0 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.mentors h3 {
+  padding: 20px 0;
+  background: linear-gradient(360deg, #234eb0 5%, #6e23b0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.subject_categ {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+  width: min(200px, 70%);
+  margin: 0 auto;
+}
+
+.subject_categ select {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  color: #6e23b0;
+  padding: 10px 15px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url("./assests/Images/select_icon.png") no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.subject_categ select option {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  color: #6e23b0;
+  font-weight: 600;
+  border: 0;
+  padding: 10px;
+  outline: none;
+}
+
+.subjects p {
+  cursor: pointer;
+  color: #6e23b0;
+  font-weight: 500;
+}
+
+.subjects + p {
+  margin: 0 0 30px 0;
+  font-size: 0.8rem;
+}
+
+.mentors_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  grid-auto-rows: 250px;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.mentor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.692);
+}
+
+.mentor img {
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.mentor_info p {
+  margin: 5px 0;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .universities {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+    grid-auto-rows: 40px;
+    font-size: .8rem;
+    text-align: center;
+  }
+
+  .mentors_grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+    grid-auto-rows: 200px;
+  }
+}
